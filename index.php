@@ -5,34 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Link Shop Butik</title>
-	<meta name="google-signin-scope" content="profile email"> 
-    <meta name="google-signin-client_id" content="44829741526-n8hkhikvhdc03ace9qef0cj4lhm2mo3n.apps.googleusercontent.com"> 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <link rel="stylesheet" type="text/css" href="style/w3.css">
-    <link rel="stylesheet" type="text/css" href="style/css.css">
-    <link rel="stylesheet" type="text/css" href="style/all.css">
-	<script src="js/ajax.js"></script>
-	<script src="js/login.js"></script>
-    <script src="js/all.js"></script>
-    <script>
-        function menuProfilIn(){
-            document.getElementById('menuProfil').classList.add('in');
-            document.getElementById('menuProfil').classList.remove('out');
-        }
-        function menuProfilOut(){
-            document.getElementById('menuProfil').classList.remove('in');
-            document.getElementById('menuProfil').classList.add('out');
-        }
-        function kategoriIn(){
-            document.getElementById('kategori').classList.add('in');
-            document.getElementById('kategori').classList.remove('out');
-        }
-        function kategoriOut(){
-            document.getElementById('kategori').classList.remove('in');
-            document.getElementById('kategori').classList.add('out');
-        }
-    </script>
+<?php include "head.php"; ?>
 </head>
 <body>
 
@@ -107,36 +80,6 @@
 		}
 	}
 ?>
-
-<!--    <div class="w3-card-4" style="width: 200px; float: left; margin-right: 40px">
-        <img src="picture/celana chino pria (99k).jpg" class="produk"><br>
-        <div style="padding: 10px 20px;">
-            <div style="margin: 0 0 20px"><b>Celana Chino Pria</b></div><br>
-            <p style="margin-top: -20px;">99000</p>
-        </div>
-    </div>
-    <div class="w3-card-4" style="width: 200px; float: left; margin-right: 40px">
-        <img src="picture/celana kulot wanita (55k).jpg" class="produk"><br>
-        <div style="padding: 10px 20px;">
-            <div style="margin-top: 0px"><b>Celana Kulot Wanita</b></div><br>
-            <p style="margin-top: -20px;">55000</p>
-        </div>
-    </div>
-    <div class="w3-card-4" style="width: 200px; float: left; margin-right: 40px">
-        <img src="picture/celana panjang kerja pria (118k).jfif" class="produk"><br>
-        <div style="padding: 10px 20px;">
-            <div style="margin-top: 0px"><b>Celana Panjang Kerja Pria</b></div><br>
-            <p style="margin-top: -20px;">118000</p>
-        </div>
-    </div>
-    <div class="w3-card-4" style="width: 200px; float: left; margin-right: 40px">
-        <img src="picture/celana panjang kerja wanita (61k).png" class="produk"><br>
-        <div style="padding: 10px 20px;">
-            <div style="margin-top: 0px;"><b>Celana Panjang Kerja Wanita</b></div><br>
-            <p style="margin-top: -20px;">61000</p>
-        </div>
-    </div>  -->
-
 </div>
 </body>
 </html>

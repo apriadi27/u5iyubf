@@ -5,16 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Link Shop Butik</title>
-	<meta name="google-signin-scope" content="profile email"> 
-    <meta name="google-signin-client_id" content="571963356124-9nhkogpvo06cmqjnav3qh8cv3848n6na.apps.googleusercontent.com"> 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <link rel="stylesheet" type="text/css" href="../style/w3.css">
-    <link rel="stylesheet" type="text/css" href="../style/css.css">
-	<link rel="stylesheet" type="text/css" href="style/all.css">
-	<script src="js/ajax.js"></script>
-	<script src="js/login.js"></script>
-    <script src="js/all.js"></script>
+<?php include "head.php"; ?>
 </head>
 <script>
 	function menuProfilIn(){
@@ -112,29 +103,6 @@
 		else{
 			echo $mysqli->error;
 		}
-		$stmt->close();
-	}
-	else{
-		echo $stmt->error;
-	}
-
-	if ($confirmationRows > 0) {
-?>
-		<table class="w3-table w3-striped">
-			<tr class="w3-deep-orange">
-				<th>Bank</th>
-				<th>No. Rek</th>
-				<th>Nama Pemilik</th>
-				<th>Status</th>
-			</tr>
-			<tr>
-				<td><?php echo $bank; ?></td>
-				<td><?php echo $numberAccount; ?></td>
-				<td><?php echo $accountOwner; ?></td>
-				<td><?php echo $status; ?></td>
-			</tr>
-		</table>
-<?php
 	}
 	else{
 ?>

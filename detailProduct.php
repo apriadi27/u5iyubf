@@ -5,16 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../style/w3.css">
-    <link rel="stylesheet" type="text/css" href="../style/css.css">
-    <title>Link Shop Butik</title>
-    <link rel="stylesheet" type="text/css" href="style/all.css">
-	<script src="js/ajax.js"></script>
-	<script src="js/login.js"></script>
-    <script src="js/all.js"></script>
+<?php include "head.php"; ?>
     <script>
     function menuProfilIn(){
             document.getElementById('menuProfil').classList.add('in');

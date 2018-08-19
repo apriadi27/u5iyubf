@@ -27,25 +27,25 @@
 
     <div class="w3-modal" style="display: none;" id="categoryAdd">
         <form action="categoryAdd.php" method="post" style="margin: 100px 500px; background-color: white; padding: 30px;">
-            <button class="cancel w3-btn w3-blue" onclick="document.getElementById('categoryAdd').style.display='none'">X</button>
+            <div class="cancel w3-btn w3-deep-orange" onclick="document.getElementById('categoryAdd').style.display='none'">X</div>
             <center><input type="text" id="addCategoryName" name="name" requiblue class="search" placeholder="Masukkan Kategori" style="margin-right: 0px;"><br>
-            <input type="submit" value="Submit" name="addSubmit" onclick="addCategory()" class="w3-btn w3-blue" style="margin-top: 20px;"></center>
+            <input type="submit" value="Submit" name="addSubmit" onclick="addCategory()" class="w3-btn w3-deep-orange" style="margin-top: 20px;"></center>
         </form>
     </div>
 
     <div class="w3-modal" style="display: none;" id="categoryEdit">
         <form action="categoryEdit.php" method="post" style="margin: 100px 500px; background-color: white; padding: 30px;">
-            <button class="cancel w3-btn w3-blue" onclick="document.getElementById('categoryAdd').style.display='none'">X</button>
+            <div class="cancel w3-btn w3-deep-orange" onclick="document.getElementById('categoryAdd').style.display='none'">X</div>
             <center><input type="text" name="editName" id="editName" requiblue class="search" placeholder="Ubah Kategori" style="margin-right: 0px;"><br>
-            <input type="submit" value="Submit" name="editSubmit" onclick="document.getElementById('categoryEdit').style.display='none'" class="w3-btn w3-blue" style="margin-top: 20px;"></center>
+            <input type="submit" value="Submit" name="editSubmit" onclick="document.getElementById('categoryEdit').style.display='none'" class="w3-btn w3-deep-orange" style="margin-top: 20px;"></center>
             <input type="hidden" name="editId" id="editId">
         </form>
     </div>
 
     <div class="isi" style="margin: 0 200px;">
-        <button class="w3-btn w3-blue" style="margin-bottom: 20px;" onclick="document.getElementById('categoryAdd').style.display='block'">Tambah Kategori</button>
+        <div class="w3-btn w3-deep-orange" style="margin-bottom: 20px;" onclick="document.getElementById('categoryAdd').style.display='block'">Tambah Kategori</div>
         <table class="w3-table w3-hoverable w3-striped">
-            <tr class="w3-blue">
+            <tr class="w3-deep-orange">
                 <th>Kategori</th>
                 <th colspan="2"><center>Option</center></th>
             </tr>

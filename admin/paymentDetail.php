@@ -53,7 +53,7 @@
                 $sqlTanggalNota, $sqlService, $sqlOngkir, $sqlStatus);
             ?> 
             <table class="w3-table w3-bordered">
-                <tr class="w3-blue">
+                <tr class="w3-deep-orange">
                     <th style="width: 400px"><center>Bukti Pembayaran</center></th>
                     <th colspan="3"><center>Detail<center></th>
                 </tr>
@@ -145,7 +145,7 @@
             ?>
             <center><p style="font-size: 18px; margin: 60px 0 20px">Produk yang dipesan</p></center>
             <table class="w3-table w3-bordered">
-                <tr class="w3-blue">
+                <tr class="w3-deep-orange">
                     <th style="width: 400px"><center>Gambar Produk</center></th>
                     <th colspan="3"><center>Detail Produk</center</th>
                 </tr>
@@ -198,7 +198,7 @@
 
     if ($status != 1) {
 ?>
-<button onclick="updateNota(<?php echo $idNota; ?>)" class="w3-btn w3-blue" style="margin-top: 40px">Terima</button>
+<div onclick="updateNota(<?php echo $idNota; ?>)" class="w3-btn w3-deep-orange" style="margin-top: 40px">Terima</div>
 <?php
     }
 ?>

@@ -53,7 +53,7 @@
                 $sqlTanggalNota, $sqlService, $sqlOngkir, $sqlStatus);
             ?> 
             <table class="w3-table w3-bordered">
-                <tr class="w3-deep-orange">
+                <tr class="w3-blue">
                     <th style="width: 400px"><center>Bukti Pembayaran</center></th>
                     <th colspan="3"><center>Detail<center></th>
                 </tr>
@@ -145,7 +145,7 @@
             ?>
             <center><p style="font-size: 18px; margin: 60px 0 20px">Produk yang dipesan</p></center>
             <table class="w3-table w3-bordered">
-                <tr class="w3-deep-orange">
+                <tr class="w3-blue">
                     <th style="width: 400px"><center>Gambar Produk</center></th>
                     <th colspan="3"><center>Detail Produk</center</th>
                 </tr>
@@ -153,7 +153,7 @@
             while ($stmt->fetch()) {
                 ?>
                 <tr>
-                    <td rowspan="6"><img src="<?php echo "../productPicture/".$sqlPicture ?>" alt="Gambar Produk" srcset=""></td>
+                    <td rowspan="6"><img src="<?php echo "../productPicture/".$sqlPicture ?>" class="buktiPembayaran" alt="Gambar Produk" srcset=""></td>
                     <td style="padding-left: 17px; width: 200px">Nama Produk</td>
                     <td>:</td>
                     <td><?php echo $sqlProduct; ?></td>
@@ -198,7 +198,7 @@
 
     if ($status != 1) {
 ?>
-<button onclick="updateNota(<?php echo $idNota; ?>)" class="w3-btn w3-deep-orange" style="margin-top: 40px">Terima</button>
+<button onclick="updateNota(<?php echo $idNota; ?>)" class="w3-btn w3-blue" style="margin-top: 40px">Terima</button>
 <?php
     }
 ?>

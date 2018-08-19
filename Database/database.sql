@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 16, 2018 at 03:05 PM
+-- Generation Time: Aug 19, 2018 at 08:42 AM
 -- Server version: 10.3.8-MariaDB-log
 -- PHP Version: 7.2.8
 
@@ -30,18 +30,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `account` (
   `idEmail` varchar(50) NOT NULL,
-  `picture` varchar(100) NOT NULL,
+  `picture` varchar(500) NOT NULL,
   `status` tinyint(1) NOT NULL,
-  `phoneNumber` char(12) DEFAULT NULL,
-  `email` char(40) DEFAULT NULL
+  `phoneNumber` char(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`idEmail`, `picture`, `status`, `phoneNumber`, `email`) VALUES
-('willychai04@gmail.com', 'jefiwjife', 0, NULL, NULL);
+INSERT INTO `account` (`idEmail`, `picture`, `status`, `phoneNumber`) VALUES
+('willychai04@gmail.com', 'jefiwjife', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -89,7 +88,15 @@ CREATE TABLE `confirmation` (
 --
 
 INSERT INTO `confirmation` (`idConfirmation`, `idNota`, `date`, `bank`, `numberAccount`, `accountOwner`, `picture`) VALUES
-(2, 12, '2018-08-16', 'abc', '123', 'aaa', '244c6c370fd1859325f7119e96a81584e.jpg');
+(4, 1, '2018-08-17', 'BCA', '0', '123', '444c6c370fd1859325f7119e96a81584e.jpg'),
+(5, 9, '2018-08-17', 'BCA', '123', 'abc', '545466a610371b160055e995896b6b4da.jpg'),
+(6, 10, '2018-08-18', 'BCA', '122', 'bbb', '645466a610371b160055e995896b6b4da.jpg'),
+(7, 11, '2018-08-18', 'aaa', '111', 'cc', '744c6c370fd1859325f7119e96a81584e.jpg'),
+(8, 13, '2018-08-18', 'abc', '123', 'aaa', '87172ce27a9e7b4b4c4cd3e747e0f9f21.jpg'),
+(9, 14, '2018-08-18', 'aa', '123', 'aa', '944c6c370fd1859325f7119e96a81584e.jpg'),
+(10, 15, '2018-08-18', 'aaa', '123', 'aa', '1044c6c370fd1859325f7119e96a81584e.jpg'),
+(11, 16, '2018-08-18', 'aaa', '123', 'aaa', '1144c6c370fd1859325f7119e96a81584e.jpg'),
+(12, 17, '2018-08-18', 'abcde', '12345', 'aaaaa', '1244c6c370fd1859325f7119e96a81584e.jpg');
 
 -- --------------------------------------------------------
 
@@ -111,7 +118,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`idContact`, `idAccount`, `idCity`, `idProvince`, `postalCode`, `Address`) VALUES
-(6, 'willychai04@gmail.com', 27, 2, 78111, 'Jl. Merdeka');
+(7, 'willychai04@gmail.com', 442, 8, 123, 'Jl. Ayani');
 
 -- --------------------------------------------------------
 
@@ -133,7 +140,7 @@ CREATE TABLE `dataproduct` (
 --
 
 INSERT INTO `dataproduct` (`idProduct`, `name`, `description`, `size`, `color`, `picture`) VALUES
-(4, 'Topi bonnet bayi perempuan bunga', 'Untuk bayi 0-24 bulan (allsize) Lingkar kepala 36-48 cm Material: cotton Pilihan warna: pink dan putih  Harga untuk 1x topi bayi ', 'S-XL', '#e971f2', '4c7489d8c7ef9dfb4cfbeb61b824a363b.jpg'),
+(4, 'Topi bonnet bayi perempuan bunga', 'Untuk bayi 0-24 bulan (allsize) Lingkar kepala 36-48 cm Material: cotton Pilihan warna: pink dan putih  Harga untuk 1x topi bayi ', 'S-XL', '#e971f2', '47172ce27a9e7b4b4c4cd3e747e0f9f21.jpg'),
 (5, 'Topi Pilot Anak &amp; Bayi Rajut', 'Topi Pilot Anak &amp; Bayi Rajut Untuk usia anak : 6 bulan - 3 tahun Ada 9 pilihan warna B, C, D dan F Kosong', 'S-XL', '#97ac40', '5646dd5120051663f2ecea223e6d6adaf.jpg'),
 (6, 'baju setelan anak bayi rompi tentara topi - cool army', 'READY SIZE ( 1 , 2 , 3 , 5 , 6 )  Setelan Baju Bayi Army (tentara) dengan Rompi Pisah dan Topi.', 'S-XL', '#278a15', '6940a7888cc97174dc6a61b594921b2b5.jpg'),
 (7, 'Jumper Bayi Nanas + Topi Laki laki Perempuan Baju Kostum Karakter Baby', 'Jumper Bayi Nanas + Topi  Bahan : Kaos (lembut, adem dan nyaman dipakai buah hati)', 'S-XL', '#e1dc11', '74ac6dd06335425875f507c83bbf4eb54.jpg'),
@@ -160,18 +167,15 @@ CREATE TABLE `nonota` (
 --
 
 INSERT INTO `nonota` (`idNota`, `idAccount`, `tanggal`, `service`, `ongkir`, `status`) VALUES
-(1, '', '2018-08-16', '', 0, 0),
-(2, '', '2018-08-16', 'Array', 49000, 0),
-(3, '', '2018-08-16', 'OKE', 49000, 0),
-(4, '', '2018-08-16', 'OKE', 49000, 0),
-(5, '', '2018-08-16', 'OKE', 49000, 0),
-(6, '', '2018-08-16', 'OKE', 49000, 0),
-(7, '', '2018-08-16', 'OKE', 49000, 0),
-(8, '', '2018-08-16', 'OKE', 49000, 0),
-(9, '', '2018-08-16', 'OKE', 49000, 0),
-(10, '', '2018-08-16', 'OKE', 49000, 0),
-(11, '', '2018-08-16', 'OKE', 49000, 0),
-(12, 'willychai04@gmail.com', '2018-08-16', 'OKE', 49000, 0);
+(1, 'willychai04@gmail.com', '2018-08-17', 'OKE', 49000, 1),
+(9, 'willychai04@gmail.com', '2018-08-17', 'OKE', 49000, 1),
+(10, 'willychai04@gmail.com', '2018-08-18', 'OKE', 49000, 1),
+(11, 'willychai04@gmail.com', '2018-08-18', 'OKE', 49000, 1),
+(13, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 1),
+(14, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 1),
+(15, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 1),
+(16, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 1),
+(17, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 0);
 
 -- --------------------------------------------------------
 
@@ -192,28 +196,21 @@ CREATE TABLE `orderr` (
 --
 
 INSERT INTO `orderr` (`idOrder`, `idProduct`, `idNota`, `total`, `message`) VALUES
-(1, 5, 1, 1, ''),
-(2, 5, 1, 1, ''),
-(3, 7, 2, 1, ''),
-(4, 5, 2, 1, ''),
-(5, 7, 3, 1, ''),
-(6, 5, 3, 1, ''),
-(7, 7, 4, 1, ''),
-(8, 5, 4, 1, ''),
-(9, 7, 5, 1, ''),
-(10, 5, 5, 1, ''),
-(11, 7, 6, 1, ''),
-(12, 5, 6, 1, ''),
-(13, 7, 7, 1, ''),
-(14, 5, 7, 1, ''),
-(15, 7, 8, 1, ''),
-(16, 5, 8, 1, ''),
-(17, 7, 9, 1, ''),
-(18, 5, 9, 1, ''),
-(19, 5, 11, 1, ''),
-(20, 8, 11, 1, ''),
-(21, 4, 12, 1, ''),
-(22, 7, 12, 1, '');
+(1, 5, 1, 2, NULL),
+(2, 5, 3, 1, NULL),
+(3, 4, 4, 1, NULL),
+(4, 5, 5, 1, NULL),
+(5, 6, 6, 1, NULL),
+(6, 4, 9, 1, NULL),
+(7, 5, 9, 1, NULL),
+(8, 5, 9, 1, NULL),
+(9, 8, 10, 1, NULL),
+(10, 6, 10, 1, NULL),
+(11, 4, 10, 1, NULL),
+(12, 9, 10, 1, NULL),
+(13, 8, 11, 2, NULL),
+(14, 5, 16, 1, '45000'),
+(15, 6, 17, 2, '123');
 
 -- --------------------------------------------------------
 
@@ -237,27 +234,12 @@ INSERT INTO `product` (`idProduct`, `idCategory`, `capital`, `sellingPrice`, `st
 (1, 6, 10000, 50000, 100),
 (2, 2, 5000, 45000, 10),
 (3, 2, 5000, 45000, 10),
-(4, 6, 5000, 45000, 10),
-(5, 6, 5000, 45000, 10),
-(6, 3, 5000, 45000, 10),
+(4, 6, 5000, 45000, 0),
+(5, 6, 5000, 45000, 2),
+(6, 3, 5000, 45000, 5),
 (7, 7, 10000, 45000, 10),
-(8, 7, 10000, 58000, 10),
-(9, 5, 10000, 60000, 10);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `profile`
---
-
-CREATE TABLE `profile` (
-  `name` char(20) NOT NULL,
-  `address` tinytext NOT NULL,
-  `logo` char(100) NOT NULL,
-  `instagram` char(200) NOT NULL,
-  `facebook` char(200) NOT NULL,
-  `google` char(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(8, 7, 10000, 58000, 7),
+(9, 5, 10000, 60000, 9);
 
 -- --------------------------------------------------------
 
@@ -272,13 +254,6 @@ CREATE TABLE `sosmed` (
   `type` char(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `sosmed`
---
-
-INSERT INTO `sosmed` (`idSosmed`, `userSosmed`, `pass`, `type`) VALUES
-(1, 'nindya@gmail.com', 'SjIxQWZkbjQh', 'Instagram');
-
 -- --------------------------------------------------------
 
 --
@@ -291,8 +266,51 @@ CREATE TABLE `transaction` (
   `productName` char(100) NOT NULL,
   `total` tinyint(3) NOT NULL,
   `capital` mediumint(8) NOT NULL,
-  `sellingPrice` mediumint(8) NOT NULL
+  `sellingPrice` mediumint(8) NOT NULL,
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaction`
+--
+
+INSERT INTO `transaction` (`idTransaction`, `idAccount`, `productName`, `total`, `capital`, `sellingPrice`, `date`) VALUES
+(1, 'willychai04@gmail.com', 'Topi bonnet bayi perempuan bunga', 1, 5000, 45000, '2018-08-17'),
+(2, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 2, 5000, 45000, '2018-08-17'),
+(3, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-17'),
+(4, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-17'),
+(5, 'willychai04@gmail.com', 'baju setelan anak bayi rompi tentara topi - cool army', 1, 5000, 45000, '2018-08-17'),
+(6, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 2, 5000, 45000, '2018-08-17'),
+(7, 'willychai04@gmail.com', 'Topi bonnet bayi perempuan bunga', 1, 5000, 45000, '2018-08-18'),
+(8, 'willychai04@gmail.com', 'Topi bonnet bayi perempuan bunga', 1, 5000, 45000, '2018-08-18'),
+(9, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(10, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(11, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(12, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(13, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 1, 10000, 58000, '2018-08-18'),
+(14, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 1, 10000, 58000, '2018-08-18'),
+(15, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 1, 10000, 58000, '2018-08-18'),
+(16, 'willychai04@gmail.com', 'baju setelan anak bayi rompi tentara topi - cool army', 1, 5000, 45000, '2018-08-18'),
+(17, 'willychai04@gmail.com', 'baju setelan anak bayi rompi tentara topi - cool army', 1, 5000, 45000, '2018-08-18'),
+(18, 'willychai04@gmail.com', 'baju setelan anak bayi rompi tentara topi - cool army', 1, 5000, 45000, '2018-08-18'),
+(19, 'willychai04@gmail.com', 'Topi bonnet bayi perempuan bunga', 1, 5000, 45000, '2018-08-18'),
+(20, 'willychai04@gmail.com', 'Topi bonnet bayi perempuan bunga', 1, 5000, 45000, '2018-08-18'),
+(21, 'willychai04@gmail.com', 'Topi bonnet bayi perempuan bunga', 1, 5000, 45000, '2018-08-18'),
+(22, 'willychai04@gmail.com', 'KAOS KAKI LUCU BAYI IMPORT MURAH - 12-24mo, tupaicoklattua', 1, 10000, 60000, '2018-08-18'),
+(23, 'willychai04@gmail.com', 'KAOS KAKI LUCU BAYI IMPORT MURAH - 12-24mo, tupaicoklattua', 1, 10000, 60000, '2018-08-18'),
+(24, 'willychai04@gmail.com', 'KAOS KAKI LUCU BAYI IMPORT MURAH - 12-24mo, tupaicoklattua', 1, 10000, 60000, '2018-08-18'),
+(25, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 2, 10000, 58000, '2018-08-18'),
+(26, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 2, 10000, 58000, '2018-08-18'),
+(27, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 2, 10000, 58000, '2018-08-18'),
+(28, 'willychai04@gmail.com', 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 2, 10000, 58000, '2018-08-18'),
+(29, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(30, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(31, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(32, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(33, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(34, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(35, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18'),
+(36, 'willychai04@gmail.com', 'Topi Pilot Anak &amp; Bayi Rajut', 1, 5000, 45000, '2018-08-18');
 
 -- --------------------------------------------------------
 
@@ -307,15 +325,6 @@ CREATE TABLE `trolli` (
   `total` smallint(5) NOT NULL,
   `message` tinytext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `trolli`
---
-
-INSERT INTO `trolli` (`idTrolli`, `idAccount`, `idProduct`, `total`, `message`) VALUES
-(9, 'willychai04@gmail.com', 6, 1, ''),
-(10, 'willychai04@gmail.com', 4, 1, ''),
-(11, 'willychai04@gmail.com', 4, 1, '');
 
 --
 -- Indexes for dumped tables
@@ -374,12 +383,6 @@ ALTER TABLE `product`
   ADD KEY `idCategory` (`idCategory`);
 
 --
--- Indexes for table `profile`
---
-ALTER TABLE `profile`
-  ADD PRIMARY KEY (`name`);
-
---
 -- Indexes for table `sosmed`
 --
 ALTER TABLE `sosmed`
@@ -411,31 +414,31 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `confirmation`
 --
 ALTER TABLE `confirmation`
-  MODIFY `idConfirmation` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idConfirmation` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `idContact` tinyint(1) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idContact` tinyint(1) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `nonota`
 --
 ALTER TABLE `nonota`
-  MODIFY `idNota` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idNota` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `orderr`
 --
 ALTER TABLE `orderr`
-  MODIFY `idOrder` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idOrder` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `idProduct` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idProduct` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `sosmed`
@@ -447,13 +450,13 @@ ALTER TABLE `sosmed`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `idTransaction` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTransaction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `trolli`
 --
 ALTER TABLE `trolli`
-  MODIFY `idTrolli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idTrolli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables

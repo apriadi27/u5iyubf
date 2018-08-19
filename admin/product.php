@@ -1,6 +1,9 @@
 <?php
     include "../config/session.php";
     include "../config/config.php";
+    if (isset($_GET['message'])) {
+        ?><script>alert("<?php echo $_GET['message']; ?>")</script><?php
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +26,7 @@
 
 <div class="w3-modal" style="display: none;" id="productAdd">
     <form action="productAdd.php" method="post" enctype="multipart/form-data" style="margin: -35px 450px; background-color: white; padding: 30px 0px 30px 60px;">
-        <button class="cancel w3-btn w3-deep-orange" onclick="document.getElementById('productAdd').style.display='none'" style="margin: -30px 0px">X</button>
+        <button class="cancel w3-btn w3-blue" onclick="document.getElementById('productAdd').style.display='none'" style="margin: -30px 0px">X</button>
 	    <input type="text" name="name" required class="search" placeholder="Masukkan Nama Produk" style="margin: 0 0 10px 55px;" autofocus><br>
 	    Upload gambar : <input type="file" name="picture" required style="margin: 0 0 10px 0;" accept="image/*"><br>
 	    <input type="text" name="description" required class="search" placeholder="Masukkan Deskripsi Produk" style="margin: 0 0 10px 55px;"><br>
@@ -46,13 +49,13 @@
 	    <input type="number" name="capital" required class="search" placeholder="Harga Modal" style="margin: 10px 0 10px 70px;"><br>
 	    <input type="number" name="sellingPrice" required class="search" placeholder="Harga Jual" style="margin: 0 0 10px 70px;"><br>
 	    <input type="number" name="stock" required class="search" placeholder="Jumlah" style="margin: 0 0 10px 70px;"><br>
-        <input type="submit" value="Submit" name="submit" onclick="document.getElementById('productAdd').style.display='none'" class="w3-btn w3-deep-orange" style="margin: 10px 0 0 130px;"></center>
+        <input type="submit" value="Submit" name="submit" onclick="document.getElementById('productAdd').style.display='none'" class="w3-btn w3-blue" style="margin: 10px 0 0 130px;"></center>
     </form>
 </div>
 
 <div class="w3-modal" style="display: none;" id="productEdit">
     <form action="productEdit.php" method="post" enctype="multipart/form-data" style="margin: -35px 450px; background-color: white; padding: 30px 0px 30px 60px;">
-        <button class="cancel w3-btn w3-deep-orange" onclick="document.getElementById('productEdit').style.display='none'" style="margin: -30px 0px">X</button>
+        <button class="cancel w3-btn w3-blue" onclick="document.getElementById('productEdit').style.display='none'" style="margin: -30px 0px">X</button>
         <input type="hidden" name="idProductEdit" id="idProductEdit">
 	    <input type="text" id="nameEdit" name="nameEdit" required class="search" placeholder="Masukkan Nama Produk" style="margin: 0 0 10px 55px;" autofocus><br>
         <center><img id="showPictureEdit" src="" alt="" srcset=""></center><br>
@@ -77,15 +80,14 @@
 	    <input type="number" id="capitalEdit" name="capitalEdit" required class="search" placeholder="Harga Modal" style="margin: 10px 0 10px 70px;"><br>
 	    <input type="number" id="sellingPriceEdit" name="sellingPriceEdit" required class="search" placeholder="Harga Jual" style="margin: 0 0 10px 70px;"><br>
 	    <input type="number" id="stockEdit" name="stockEdit" required class="search" placeholder="Jumlah" style="margin: 0 0 10px 70px;"><br>
-        <input type="submit" value="Submit" name="submitEdit" onclick="document.getElementById('productAdd').style.display='none'" class="w3-btn w3-deep-orange" style="margin: 10px 0 0 130px;"></center>
+        <input type="submit" value="Submit" name="submitEdit" onclick="document.getElementById('productAdd').style.display='none'" class="w3-btn w3-blue" style="margin: 10px 0 0 130px;"></center>
     </form>
 </div>
 
 <div class="isi">
-  <button class="w3-btn w3-deep-orange" onclick="document.getElementById('productAdd').style.display='block'">Tambah Produk</button>
-  <input type="text" name="search" placeholder="Cari produk" class="search" style="margin: 0 0 20px 0; float: right;">
+  <button class="w3-btn w3-blue" onclick="document.getElementById('productAdd').style.display='block'" style="margin-bottom: 20px">Tambah Produk</button>
   <table class="w3-table w3-hoverable w3-striped">
-    <tr class="w3-deep-orange">
+    <tr class="w3-blue">
       <td style="width: 100px">ID Produk</td>
       <td>Nama Produk</td>
       <td>Deskripsi</td>

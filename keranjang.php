@@ -5,30 +5,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Link Shop Butik</title>
-	<meta name="google-signin-scope" content="profile email"> 
-    <meta name="google-signin-client_id" content="571963356124-9nhkogpvo06cmqjnav3qh8cv3848n6na.apps.googleusercontent.com"> 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <link rel="stylesheet" type="text/css" href="../style/w3.css">
-    <link rel="stylesheet" type="text/css" href="../style/css.css">
-	<link rel="stylesheet" type="text/css" href="style/all.css">
-	<script src="js/ajax.js"></script>
-	<script src="js/login.js"></script>
-    <script src="js/all.js"></script>
+<?php include 'head.php'; ?>
 </head>
-<script>
-	function menuProfilIn(){
-		document.getElementById('menuProfil').classList.add('in');
-		document.getElementById('menuProfil').classList.remove('out');
-	}
-	function menuProfilOut(){
-		document.getElementById('menuProfil').classList.remove('in');
-		document.getElementById('menuProfil').classList.add('out');
-	}
-</script>
 <body>
 
 <?php
+    
+    $id = $_SESSION['id'];
+    $sql = "SELECT idContact FROM contact WHERE idAccount=?";
+    if ($stmt = $mysqli->prepare($sql)) {
+        $stmt->bind_param("s", $id);
+        if ($stmt->execute()) {
+            $stmt->store_result();
+            if ($stmt->num_rows < 1) {
+                header("Location: kontak.php?message=Tambah alamat terlebih dahulu untuk bisa beli item");
+            }
+        }
+        else{
+            echo $stmt->error;
+        }
+        $stmt->close();
+    }
+    else{
+        $mysqli->error;
+    }
     include 'header.php';
 ?>
 
@@ -36,7 +36,6 @@
 <?php
     $isi;
     $totalPrice = 0;
-    $id = $_SESSION['id'];
     //cek banyaknya trolli pengguna
     $sql = "SELECT idTrolli FROM trolli WHERE idAccount='$id' ORDER BY idTrolli";
     $query = $mysqli->query($sql);
@@ -46,7 +45,8 @@
             product.sellingPrice,
             dataproduct.name,
             dataproduct.picture,
-            trolli.total
+            trolli.total,
+            trolli.message
             FROM trolli
             INNER JOIN product
             ON trolli.idProduct = product.idProduct
@@ -56,10 +56,10 @@
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->bind_param("s", $id);
         if ($stmt->execute()) {
-            $stmt->bind_result($idProduct, $sellingPrice, $name, $picture, $total);
+            $stmt->bind_result($idProduct, $sellingPrice, $name, $picture, $total, $message);
             ?>
             <table class="w3-table w3-bordered w3-striped" style="margin: 0 100px 40px 0; width: 500px; float: left">
-                <tr class="w3-deep-orange">
+                <tr class="w3-blue">
                     <td>Produk yang Dipesan</td>
                 </tr>
             <?php
@@ -78,7 +78,8 @@
                         </div>
                     </div>
                     <div>
-                        Total = <?php echo $sellingPrice*$total; $totalPrice += $sellingPrice*$total ?>
+                        Total = <?php echo $sellingPrice*$total; $totalPrice += $sellingPrice*$total ?><br><br><br>
+                        Pesan : <?php echo $message; ?><br>
                     </div>
                     </td>
                 </tr>
@@ -101,7 +102,7 @@
 ?>
 
     <table class="w3-table w3-bordered" style="margin: 0 0 40px 0px; width: 400px;">
-        <tr class="w3-deep-orange">
+        <tr class="w3-blue">
             <td>Jasa Pengiriman</td>
         </tr>
         <tr>
@@ -134,7 +135,7 @@
         <div style="float: left; margin-right: 10px">Total biaya : </div> 
         <div id="totalPrice"><?php echo $totalPrice; ?></div>
     </div><br>
-    <button class="w3-btn w3-deep-orange" style="margin-top: 10px" onclick="addOrder()">Konfirmasi Pesanan</button>
+    <button class="w3-btn w3-blue" style="margin-top: 10px" onclick="addOrder()">Konfirmasi Pesanan</button>
 </div>
 <?php
     }

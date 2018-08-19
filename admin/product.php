@@ -30,8 +30,8 @@
 	    <input type="text" name="name" required class="search" placeholder="Masukkan Nama Produk" style="margin: 0 0 10px 55px;" autofocus><br>
 	    Upload gambar : <input type="file" name="picture" required style="margin: 0 0 10px 0;" accept="image/*"><br>
 	    <input type="text" name="description" required class="search" placeholder="Masukkan Deskripsi Produk" style="margin: 0 0 10px 55px;"><br>
-	    <input type="text" name="smallSize" required class="search" placeholder="Ukuran paling kecil" style="margin: 0 0 10px 55px;"><br>
-	    <input type="text" name="bigSize" required class="search" placeholder="Ukuran paling besar" style="margin: 0 0 10px 55px;"><br>
+	    <input type="text" name="smallSize" class="search" placeholder="Ukuran paling kecil" style="margin: 0 0 10px 55px;"><br>
+	    <input type="text" name="bigSize" class="search" placeholder="Ukuran paling besar" style="margin: 0 0 10px 55px;"><br>
 	    Pilih warna produk : <input type="color" name="color" required class="search" style="margin: 0 0 10px 0px;"><br>
         Pilih kategori produk : <select name="category">
             <?php
@@ -61,8 +61,8 @@
         <center><img id="showPictureEdit" src="" alt="" srcset=""></center><br>
 	    Upload gambar : <input id="pictureEdit" type="file" name="pictureEdit" style="margin: 0 0 10px 0;" accept="image/*"><br>
 	    <input type="text" id="descriptionEdit" name="descriptionEdit" required class="search" placeholder="Masukkan Deskripsi Produk" style="margin: 0 0 10px 55px;"><br>
-	    <input type="text" id="smallSizeEdit" name="smallSizeEdit" required class="search" placeholder="Ukuran paling kecil" style="margin: 0 0 10px 55px;"><br>
-	    <input type="text" id="bigSizeEdit" name="bigSizeEdit" required class="search" placeholder="Ukuran paling besar" style="margin: 0 0 10px 55px;"><br>
+	    <input type="text" id="smallSizeEdit" name="smallSizeEdit" class="search" placeholder="Ukuran paling kecil" style="margin: 0 0 10px 55px;"><br>
+	    <input type="text" id="bigSizeEdit" name="bigSizeEdit" class="search" placeholder="Ukuran paling besar" style="margin: 0 0 10px 55px;"><br>
 	    Pilih warna produk : <input id="colorEdit" type="color" name="colorEdit" required class="search" style="margin: 0 0 10px 0px;"><br>
         Pilih kategori produk : <select id="categoryEdit" name="categoryEdit">
             <?php

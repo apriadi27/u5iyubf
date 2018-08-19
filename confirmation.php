@@ -73,7 +73,7 @@
 				$stmt->bind_result($sqlStatus, $sqlIdConfirmation, $sqlBank, $sqlNumberAccount, $sqlAccountOwner);
 				?>
 				<table class="w3-table w3-striped">
-				<tr class="w3-blue">
+				<tr class="w3-deep-orange">
 					<th>Bank</th>
 					<th>No. Rek</th>
 					<th>Nama Pemilik</th>
@@ -114,7 +114,7 @@
 		<input type="text" name="numberAccount" placeholder="Nomor Rekening" class="search" style="width: 400px; margin: 20px 0 40px -27px;"><br>
 		<input type="text" name="accountOwner" placeholder="Nama Pemilik Rekening" class="search" style="width: 400px; margin: 20px 0 40px -27px;"><br>
 		Upload bukti pembayaran : <input type="file" name="picture" style="margin-bottom: 40px;" accept="image/*"><br>
-		<input type="submit" value="Bayar" name="addSubmit" class="w3-btn w3-blue" style="margin: 40px 0 0 -27px">
+		<input type="submit" value="Bayar" name="addSubmit" class="w3-btn w3-deep-orange" style="margin: 40px 0 0 -27px">
 	</form>
 </div>
 <?php

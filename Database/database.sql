@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
+<<<<<<< HEAD
 -- Generation Time: Aug 19, 2018 at 08:42 AM
+=======
+-- Generation Time: Aug 17, 2018 at 08:40 AM
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- Server version: 10.3.8-MariaDB-log
 -- PHP Version: 7.2.8
 
@@ -19,7 +23,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tokobaju1`
+-- Database: `tokobaju2`
 --
 
 -- --------------------------------------------------------
@@ -35,6 +39,7 @@ CREATE TABLE `account` (
   `phoneNumber` char(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `account`
 --
@@ -42,6 +47,8 @@ CREATE TABLE `account` (
 INSERT INTO `account` (`idEmail`, `picture`, `status`, `phoneNumber`) VALUES
 ('willychai04@gmail.com', 'jefiwjife', 0, NULL);
 
+=======
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- --------------------------------------------------------
 
 --
@@ -58,14 +65,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`idCategory`, `name`) VALUES
-(1, 'Baju Bayi'),
-(2, 'Celana pendek bayi'),
-(3, 'Celana panjang bayi'),
-(4, 'Sarung tangan'),
-(5, 'Kaos kaki'),
-(6, 'Topi bayi'),
-(7, 'Setelan Baju Bayi'),
-(8, 'Baju Bayi');
+(1, 'unknown');
 
 -- --------------------------------------------------------
 
@@ -83,6 +83,7 @@ CREATE TABLE `confirmation` (
   `picture` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `confirmation`
 --
@@ -98,6 +99,8 @@ INSERT INTO `confirmation` (`idConfirmation`, `idNota`, `date`, `bank`, `numberA
 (11, 16, '2018-08-18', 'aaa', '123', 'aaa', '1144c6c370fd1859325f7119e96a81584e.jpg'),
 (12, 17, '2018-08-18', 'abcde', '12345', 'aaaaa', '1244c6c370fd1859325f7119e96a81584e.jpg');
 
+=======
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- --------------------------------------------------------
 
 --
@@ -113,6 +116,7 @@ CREATE TABLE `contact` (
   `Address` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `contact`
 --
@@ -120,6 +124,8 @@ CREATE TABLE `contact` (
 INSERT INTO `contact` (`idContact`, `idAccount`, `idCity`, `idProvince`, `postalCode`, `Address`) VALUES
 (7, 'willychai04@gmail.com', 442, 8, 123, 'Jl. Ayani');
 
+=======
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- --------------------------------------------------------
 
 --
@@ -135,6 +141,7 @@ CREATE TABLE `dataproduct` (
   `picture` char(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `dataproduct`
 --
@@ -147,6 +154,8 @@ INSERT INTO `dataproduct` (`idProduct`, `name`, `description`, `size`, `color`, 
 (8, 'Setelan Baju Anak Bayi laki Lucu 2 Dasi + Topi - Thomas', 'Pilihan Warna : MERAH?BIRU NAVY/ABU (MOHON CEK STOK DAHULU) 1 set terdiri dari : Baju + Celana + Topi + 2 Dasi (dasi Kupu kupu dan Dasi Panjang)', 'S-XL', '#e90a0f', '8442a6d451b436d8a04137a0e82320f4d.jpg'),
 (9, 'KAOS KAKI LUCU BAYI IMPORT MURAH - 12-24mo, tupaicoklattua', 'bahan premium, halus dan sangat nyaman dipakai untuk kaki si Kecil Mom,  bentuk sangat Lucu, menarik, warna cerah, dan bentuk 3d yah Mom^^', 'S-XL', '#219a10', '90c0b025e19357db01cf77ed348a37be5.jpg');
 
+=======
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- --------------------------------------------------------
 
 --
@@ -162,6 +171,7 @@ CREATE TABLE `nonota` (
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `nonota`
 --
@@ -177,6 +187,8 @@ INSERT INTO `nonota` (`idNota`, `idAccount`, `tanggal`, `service`, `ongkir`, `st
 (16, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 1),
 (17, 'willychai04@gmail.com', '2018-08-18', 'OKE', 48000, 0);
 
+=======
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- --------------------------------------------------------
 
 --
@@ -191,6 +203,7 @@ CREATE TABLE `orderr` (
   `message` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `orderr`
 --
@@ -212,6 +225,8 @@ INSERT INTO `orderr` (`idOrder`, `idProduct`, `idNota`, `total`, `message`) VALU
 (14, 5, 16, 1, '45000'),
 (15, 6, 17, 2, '123');
 
+=======
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 -- --------------------------------------------------------
 
 --
@@ -226,6 +241,7 @@ CREATE TABLE `product` (
   `stock` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+<<<<<<< HEAD
 --
 -- Dumping data for table `product`
 --
@@ -240,6 +256,22 @@ INSERT INTO `product` (`idProduct`, `idCategory`, `capital`, `sellingPrice`, `st
 (7, 7, 10000, 45000, 10),
 (8, 7, 10000, 58000, 7),
 (9, 5, 10000, 60000, 9);
+=======
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile`
+--
+
+CREATE TABLE `profile` (
+  `name` char(20) NOT NULL,
+  `address` tinytext NOT NULL,
+  `logo` char(100) NOT NULL,
+  `instagram` char(200) NOT NULL,
+  `facebook` char(200) NOT NULL,
+  `google` char(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 -- --------------------------------------------------------
 
@@ -408,43 +440,63 @@ ALTER TABLE `trolli`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `idCategory` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idCategory` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `confirmation`
 --
 ALTER TABLE `confirmation`
+<<<<<<< HEAD
   MODIFY `idConfirmation` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+=======
+  MODIFY `idConfirmation` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
+<<<<<<< HEAD
   MODIFY `idContact` tinyint(1) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+=======
+  MODIFY `idContact` tinyint(1) UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 --
 -- AUTO_INCREMENT for table `nonota`
 --
 ALTER TABLE `nonota`
+<<<<<<< HEAD
   MODIFY `idNota` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+=======
+  MODIFY `idNota` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 --
 -- AUTO_INCREMENT for table `orderr`
 --
 ALTER TABLE `orderr`
+<<<<<<< HEAD
   MODIFY `idOrder` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+=======
+  MODIFY `idOrder` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
+<<<<<<< HEAD
   MODIFY `idProduct` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+=======
+  MODIFY `idProduct` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 --
 -- AUTO_INCREMENT for table `sosmed`
 --
 ALTER TABLE `sosmed`
-  MODIFY `idSosmed` tinyint(2) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idSosmed` tinyint(2) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transaction`
@@ -456,7 +508,11 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `trolli`
 --
 ALTER TABLE `trolli`
+<<<<<<< HEAD
   MODIFY `idTrolli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+=======
+  MODIFY `idTrolli` int(11) NOT NULL AUTO_INCREMENT;
+>>>>>>> 9a6655a3901363e63f4be7e221dd9999c8e0edfa
 
 --
 -- Constraints for dumped tables

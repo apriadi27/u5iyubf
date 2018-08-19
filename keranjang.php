@@ -59,7 +59,7 @@
             $stmt->bind_result($idProduct, $sellingPrice, $name, $picture, $total, $message);
             ?>
             <table class="w3-table w3-bordered w3-striped" style="margin: 0 100px 40px 0; width: 500px; float: left">
-                <tr class="w3-blue">
+                <tr class="w3-deep-orange">
                     <td>Produk yang Dipesan</td>
                 </tr>
             <?php
@@ -102,7 +102,7 @@
 ?>
 
     <table class="w3-table w3-bordered" style="margin: 0 0 40px 0px; width: 400px;">
-        <tr class="w3-blue">
+        <tr class="w3-deep-orange">
             <td>Jasa Pengiriman</td>
         </tr>
         <tr>
@@ -135,7 +135,7 @@
         <div style="float: left; margin-right: 10px">Total biaya : </div> 
         <div id="totalPrice"><?php echo $totalPrice; ?></div>
     </div><br>
-    <button class="w3-btn w3-blue" style="margin-top: 10px" onclick="addOrder()">Konfirmasi Pesanan</button>
+    <button class="w3-btn w3-deep-orange" style="margin-top: 10px" onclick="addOrder()">Konfirmasi Pesanan</button>
 </div>
 <?php
     }
